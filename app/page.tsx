@@ -1,8 +1,6 @@
 import Image from "next/image"
-import Dynamic from "@/components";
 import Link from "next/link";
-
-const {
+import {
   // A,
   Abbr,
   Address,
@@ -107,7 +105,7 @@ const {
   Ul,
   Var,
   Video,
-} = Dynamic;
+} from '@/components';
 
 export default function Page() {
   return (
@@ -180,9 +178,9 @@ export default function Page() {
       </Template>
 
       <Video width={640} height={480} src="https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4">
-        <Track kind="subtitles" src="subtitles_de.vtt" srcLang="de" Label={"Transcriptions in Dutch"} />
-        <Track kind="subtitles" src="subtitles_en.vtt" srcLang="en" Label={"Transcriptions in English"} />
-        <Track kind="subtitles" src="subtitles_ja.vtt" srcLang="ja" Label={"Transcriptions in Japanese"} />
+        <Track kind="subtitles" src="subtitles_de.vtt" srcLang="de" label={"Transcriptions in Dutch"} />
+        <Track kind="subtitles" src="subtitles_en.vtt" srcLang="en" label={"Transcriptions in English"} />
+        <Track kind="subtitles" src="subtitles_ja.vtt" srcLang="ja" label={"Transcriptions in Japanese"} />
           Sorry, your browser doesn't support HTML5 <code>video</code>, but you can
         download this video from the <Link href="https://archive.org/details/Popeye_forPresident" target="_blank">Internet Archive</Link>.
       </Video>
@@ -255,12 +253,12 @@ export default function Page() {
       <P> 2+2 = <output>4</output> </P>
 
       <Select>
-        <Optgroup Label="Choice [1-3]">
+        <Optgroup label="Choice [1-3]">
           <Option value="1">One</Option>
           <Option value="2">Two</Option>
           <Option value="3">Three</Option>
         </Optgroup>
-        <Optgroup Label="Choice [4-6]">
+        <Optgroup label="Choice [4-6]">
           <Option value="4">Four</Option>
           <Option value="5">Five</Option>
           <Option value="6">Six</Option>

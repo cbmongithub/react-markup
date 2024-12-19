@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
 import "../styles/globals.css";
+import { Html, Body, Main } from "@/components";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "React Markup",
 	description:
-		"A collection of unstyled components for the purpose of starting a design system, create and testing new styles, or just to have fun learning! Bring your own CSS. Powered by playroom and NextJS.",
-};
+		"A collection of unstyled, jsx markup for the sole purpose of tinkering. Building with Playroom and Nextjs",
+}
 
 export default function RootLayout({
   children,
@@ -13,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-			<html lang="en">
-				<body>{children}</body>
-			</html>
+	  <Html lang="en">
+		  <Body>
+			  <Main>
+				  {children}
+			  </Main>
+		  </Body>
+	  </Html>
 		);
 }

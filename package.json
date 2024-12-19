@@ -7,20 +7,20 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"playroom:start": "playroom start",
+		"playroom": "playroom start",
 		"playroom:build": "playroom build"
 	},
 	"dependencies": {
+		"next": "15.1.0",
+		"playroom": "^0.39.1",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"next": "15.1.0"
+		"react-dom": "^19.0.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"playroom": "^0.39.1",
 		"typescript": "^5"
 	}
 }

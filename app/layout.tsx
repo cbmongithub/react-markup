@@ -4,7 +4,7 @@ import "../styles/globals.css";
 export const metadata: Metadata = {
 	title: "React Markup",
 	description:
-		"A collection of all React elements. Start a design system, create and test styles, or just have fun learning! Bring your own CSS. Powered by playroom and NextJS.",
+		"A collection of unstyled components for the purpose of starting a design system, create and testing new styles, or just to have fun learning! Bring your own CSS. Powered by playroom and NextJS.",
 };
 
 export default function RootLayout({

@@ -1,9 +1,113 @@
-// import { Abbr, B, Blockquote, Br, Del, Em, Header, Heading, Hr, I, Kbd, Li, Main, Mark, Menu, Nav, Object, Ol, P, Rt, Ruby, S, Small, Span, Sub, Sup, Template, Time, Track, U, Ul, Video } from "@/components/backup";
 import Image from "next/image"
-import Dynamic from "@/components/dynamic";
+import Dynamic from "@/components";
 import Link from "next/link";
 
-const { P, B, I, H1, H2, H3, H4, H5, H6, Em, Mark, Object, Span, Main, Small, Nav, Li, Menu, Sub, Sup, U, Abbr, Del, S, Time, Ruby, Rt, Br, Kbd, Blockquote, Ol, Header, Ul, Hr, Template, Video, Track } = Dynamic;
+const {
+  // A,
+  Abbr,
+  Address,
+  Area,
+  Article,
+  Aside,
+  Audio,
+  B,
+  // Base,
+  // Bdi,
+  // Bdo,
+  Blockquote,
+  // Body,
+  Br,
+  // Button,
+  // Canvas,
+  // Caption,
+  // Cite,
+  Code,
+  // Col,
+  // Colgroup,
+  // Data,
+  Datalist,
+  Dd,
+  Del,
+  Details,
+  Dfn,
+  // Dialog,
+  Div,
+  Dl,
+  Dt,
+  Em,
+  // Embed,
+  Fieldset,
+  Figcaption,
+  Figure,
+  Footer,
+  Form,
+  H1,
+  Header,
+  // Hgroup,
+  Hr,
+  // Html,
+  I,
+  Iframe,
+  // Img,
+  Input,
+  // Ins,
+  Kbd,
+  Label,
+  Legend,
+  Li,
+  // Link,
+  Main,
+  Map,
+  Mark,
+  Menu,
+  Meter,
+  Nav,
+  Object,
+  Ol,
+  Optgroup,
+  Option,
+  // Output,
+  P,
+  // Picture,
+  // Portal,
+  Pre,
+  Progress,
+  // Q,
+  // Rp,
+  Rt,
+  Ruby,
+  S,
+  Samp,
+  // Script,
+  // Search,
+  Section,
+  Select,
+  // Slot,
+  Small,
+  Source,
+  Span,
+  // Strong,
+  // Style,
+  Sub,
+  Summary,
+  Sup,
+  Table,
+  Tbody,
+  Td,
+  Template,
+  Textarea,
+  Tfoot,
+  Th,
+  Thead,
+  Time,
+  // Title,
+  Tr,
+  Track,
+  U,
+  Ul,
+  Var,
+  Video,
+} = Dynamic;
 
 export default function Page() {
   return (
@@ -23,11 +127,6 @@ export default function Page() {
             </Menu>
           </Nav>
         <H1>Page Title</H1>
-        <H2>Subtitle</H2>
-        <H3>Sub-subtitle</H3>
-        <H4>Sub-sub-subtitle</H4>
-        <H5>Sub-sub-sub-subtitle</H5>
-        <H6>Sub-sub-sub-sub-subtitle</H6>
         </Header>
       <Main>
         <P>
@@ -43,7 +142,7 @@ export default function Page() {
           <Sup> sup </Sup>
           <U> Statements... </U>
           <Abbr title="National Aeronautics and Space Administration">NASA</Abbr>
-          <Span><Del> deprecated info </Del> <ins> new info </ins> </Span>
+          <Span><Del> dePrecated info </Del> <ins> new info </ins> </Span>
           <S> not relevant </S>
           <Link href="#link">link</Link>
           <Time dateTime={"2020-08-17 08:00"}>Monday at 8:00 AM</Time>
@@ -81,9 +180,9 @@ export default function Page() {
       </Template>
 
       <Video width={640} height={480} src="https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4">
-        <Track kind="subtitles" src="subtitles_de.vtt" srcLang="de" label={"Transcriptions in Dutch"} />
-        <Track kind="subtitles" src="subtitles_en.vtt" srcLang="en" label={"Transcriptions in English"} />
-        <Track kind="subtitles" src="subtitles_ja.vtt" srcLang="ja" label={"Transcriptions in Japanese"} />
+        <Track kind="subtitles" src="subtitles_de.vtt" srcLang="de" Label={"Transcriptions in Dutch"} />
+        <Track kind="subtitles" src="subtitles_en.vtt" srcLang="en" Label={"Transcriptions in English"} />
+        <Track kind="subtitles" src="subtitles_ja.vtt" srcLang="ja" Label={"Transcriptions in Japanese"} />
           Sorry, your browser doesn't support HTML5 <code>video</code>, but you can
         download this video from the <Link href="https://archive.org/details/Popeye_forPresident" target="_blank">Internet Archive</Link>.
       </Video>
@@ -92,163 +191,159 @@ export default function Page() {
           Please install the Shockwave plugin to watch this movie.
       </Object>
 
-        <pre>
-          This is a preformatted text.
+      <Pre>
+        This is a Preformatted text.
           It keeps the spaces and line breaks.
-        </pre>
+      </Pre>
 
-        <code>print("Hello, World!")</code>
+      <Code>print("Hello, World!")</Code>
       <P>
-          <var> variable </var> = 1000;
-          <samp>Traceback (most recent call last):<br />NameError: name 'variabl' is not defined</samp>
+        <Var> variable </Var>
+        <Samp>hello world</Samp>
       </P>
-        <table>
-          <thead>
-            <tr>
-              <th>Numbers</th>
-              <th>Letters</th>
-              <th>Colors</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <td>123</td>
-              <td>ABC</td>
-              <td>RGB</td>
-            </tr>
-          </tfoot>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>A</td>
-              <td>Red</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>B</td>
-              <td>Green</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>C</td>
-              <td>Blue</td>
-            </tr>
-          </tbody>
-        </table>
+      <Table>
+        <Thead>
+          <Tr>
+            <Th>Numbers</Th>
+            <Th>Letters</Th>
+            <Th>Colors</Th>
+          </Tr>
+        </Thead>
+        <Tfoot>
+          <Tr>
+            <Td>123</Td>
+            <Td>ABC</Td>
+            <Td>RGB</Td>
+          </Tr>
+        </Tfoot>
+        <Tbody>
+          <Tr>
+            <Td>1</Td>
+            <Td>A</Td>
+            <Td>Red</Td>
+          </Tr>
+          <Tr>
+            <Td>2</Td>
+            <Td>B</Td>
+            <Td>Green</Td>
+          </Tr>
+          <Tr>
+            <Td>3</Td>
+            <Td>C</Td>
+            <Td>Blue</Td>
+          </Tr>
+        </Tbody>
+      </Table>
 
-      <P> A <dfn>definition</dfn> is an explanation of the meaning of a word or phrase. </P>
+      <P> A <Dfn>definition</Dfn> is an explanation of the meaning of a word or phrase. </P>
 
-        <details>
-          <summary>Summary of content below</summary>
+      <Details>
+        <Summary>Summary of content below</Summary>
         <P>Content 1</P>
         <P>Content 2</P>
         <P>Content 3</P>
         <P>Content 4</P>
-        </details>
-        <section>
-          <h1>Content</h1>
+      </Details>
+      <Section>
+        <H1>Content</H1>
         <P>Informations about content.</P>
-        </section>
+      </Section>
 
-        <progress value="33" max="100"></progress>
-        <meter value="11" min="0" max="45" optimum={40}>25 out of 45</meter>
+      <Progress value="33" max="100"></Progress>
+      <Meter value="11" min="0" max="45" optimum={40}>25 out of 45</Meter>
 
       <P> 2+2 = <output>4</output> </P>
 
-        <select>
-          <optgroup label="Choice [1-3]">
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </optgroup>
-          <optgroup label="Choice [4-6]">
-            <option value="4">Four</option>
-            <option value="5">Five</option>
-            <option value="6">Six</option>
-          </optgroup>
-        </select>
+      <Select>
+        <Optgroup Label="Choice [1-3]">
+          <Option value="1">One</Option>
+          <Option value="2">Two</Option>
+          <Option value="3">Three</Option>
+        </Optgroup>
+        <Optgroup Label="Choice [4-6]">
+          <Option value="4">Four</Option>
+          <Option value="5">Five</Option>
+          <Option value="6">Six</Option>
+        </Optgroup>
+      </Select>
 
-        <div>
-          <div>
+      <Div>
+        <Div>
           <P>{`div > div > p`}</P>
-          </div>
+        </Div>
 
-          <br />
+        <Br />
 
 
-        </div>
-        <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40" stroke="green" strokeWidth="4" fill="yellow" />
-        </svg>
+      </Div>
 
-        <br />
+      <Textarea rows={4} cols={50} />
 
-      <textarea rows={4} cols={50} />
+      <Br />
 
-        <br />
-
-        <audio controls>
+      <Audio controls>
           I'm sorry. You're browser doesn't support HTML5 <code>audio</code>.
-          <source src="https://archive.org/download/ReclaimHtml5/ReclaimHtml5.ogg" type="audio/ogg" />
-          <source src="https://archive.org/download/ReclaimHtml5/ReclaimHtml5.mp3" type="audio/mpeg" />
-        </audio>
+        <Source src="https://archive.org/download/ReclaimHtml5/ReclaimHtml5.ogg" type="audio/ogg" />
+        <Source src="https://archive.org/download/ReclaimHtml5/ReclaimHtml5.mp3" type="audio/mpeg" />
+      </Audio>
       <P>This is a recording of a talk called <cite>Reclaim HTML5</cite> which was orinally delieved in Vancouver at a
         <Link href="http://www.meetup.com/vancouver-javascript-developers/" target="_blank">Super VanJS Meetup</Link>.
         It is hosted by <Link href="https://archive.org/details/ReclaimHtml5" target="_blank">The Internet Archive</Link> and licensed under
         <Link href="http://creativecommons.org/licenses/by/3.0/legalcode" target="_blank">CC 3.0</Link>.</P>
 
-      <iframe src="https://open.spotify.com/embed?uri=spotify%3ATrack%3A67HxeUADW4H3ERfaPW59ma?si=PogFcGg9QqapyoPbn2lVOw" width="300" height="380"></iframe>
+      <Iframe src="https://open.spotify.com/embed?uri=spotify%3ATrack%3A67HxeUADW4H3ERfaPW59ma?si=PogFcGg9QqapyoPbn2lVOw" width="300" height="380"></Iframe>
 
-        <article>
-          <header>
-            <h2>Title of Article</h2>
+      <Article>
+        <Header>
+          <H1>Title of Article</H1>
           <Span>by Arthur T. Writer</Span>
-          </header>
+        </Header>
         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat sollicitudin nisi,
           at convallis nunc semper et. Donec ultrices odio ac purus facilisis, at mollis urna finibus.</P>
-          <figure>
+        <Figure>
             <Image src="https://placehold.it/600x300" alt="placeholder-image" width={600} height={300} />
-            <figcaption> Caption.</figcaption>
-          </figure>
-          <footer> <dl> <dt>Published</dt> <dd>17 August 2020</dd> <dt>Tags</dt> <dd>Sample Posts, html example</dd> </dl> </footer>
-        </article>
+          <Figcaption> Caption.</Figcaption>
+        </Figure>
+        <Footer> <Dl> <Dt>Published</Dt> <Dd>17 August 2020</Dd> <Dt>Tags</Dt> <Dd>Sample Posts, html example</Dd> </Dl> </Footer>
+      </Article>
 
-        <form>
-          <fieldset>
-            <legend>Personal Information</legend>
-            <label htmlFor="name">Name</label><br />
-            <input name="name" id="name" /><br />
-            <label htmlFor="dob">Date of Birth</label>
-            <br />
-            <input name="dob" id="dob" type="date" />
-          </fieldset>
-        </form>
+      <Form>
+        <Fieldset>
+          <Legend>Personal Information</Legend>
+          <Label htmlFor="name">Name</Label><br />
+          <Input name="name" id="name" /><br />
+          <Label htmlFor="dob">Date of Birth</Label>
+          <Br />
+          <Input name="dob" id="dob" type="date" />
+        </Fieldset>
+      </Form>
 
-        <aside>
+      <Aside>
+        <H1>Aside Title</H1>
         <P> P inside ASIDE tag </P>
-        </aside>
-        <map name="shapesmap"> <area shape="rect" coords="29,32,230,215" href="#square" alt="Square" />
-          <area shape="circle" coords="360,130,100" href="#circle" alt="Circle" /> </map>
+      </Aside>
+      <Map name="shapesmap"> <Area shape="rect" coords="29,32,230,215" href="#square" alt="Square" />
+        <Area shape="circle" coords="360,130,100" href="#circle" alt="Circle" /> </Map>
 
         <Image src="https://placehold.it/100x100" alt="placeholder-image" width={100} height={100} />
 
-        <form action="" method="get">
-          <label htmlFor="browser">Choose your browser from the list:</label>
-          <input list="browsers" name="browser" id="browser" />
-          <datalist id="browsers">
-            <option value="Edge" />
-            <option value="Firefox" />
-            <option value="Chrome" />
-            <option value="Opera" />
-            <option value="Safari" />
-          </datalist>
-          <input type="submit" />
-        </form>
+      <Form action="" method="get">
+        <Label htmlFor="browser">Choose your browser from the list:</Label>
+        <Input list="browsers" name="browser" id="browser" />
+        <Datalist id="browsers">
+          <Option value="Edge" />
+          <Option value="Firefox" />
+          <Option value="Chrome" />
+          <Option value="Opera" />
+          <Option value="Safari" />
+        </Datalist>
+        <Input type="submit" />
+      </Form>
 
-        <footer>
-        <address> relevant contacts <Link href="mailto:mail@example.com">mail</Link>.</address>
-        <div> created by <Link href="https://blazardsky.space">@blazardsky</Link></div>
-        </footer>
+      <Footer>
+        <Address> relevant contacts <Link href="mailto:mail@example.com">mail</Link>.</Address>
+        <Div> created by <Link href="https://blazardsky.space">@blazardsky</Link></Div>
+      </Footer>
 
     </>
   );

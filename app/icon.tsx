@@ -21,7 +21,7 @@ export default function Icon() {
                     color: 'white',
                 }}
             >
-                A
+                🎨
             </div>
         ),
         {

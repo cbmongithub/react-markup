@@ -2,187 +2,129 @@ import { JSX } from "react";
 
 declare global {
     namespace ReactMarkup {
-        type Component<T = HTMLElement> = React.HTMLAttributes<T> & {
+        type ComponentProps<T = HTMLElement> = React.HTMLAttributes<T> & {
             children?: React.ReactNode;
         }
 
         type ElementMap<T = JSX.IntrinsicElements> = {
-            [K in keyof T]: Component<T[K]>;
+            [K in keyof T]: ComponentProps<T[K]>;
         }
 
         type Element = ElementMap & {
-            [key: string]: Component;
+            [key: string]: ComponentProps;
         }
 
-        interface Elements {
-            a: Component<HTMLAnchorElement>;
-            area: Component<HTMLAreaElement>;
-            audio: Component<HTMLAudioElement>;
-            base: Component<HTMLBaseElement>;
-            blockquote: Component<HTMLQuoteElement>;
-            button: Component<HTMLButtonElement>;
-            canvas: Component<HTMLCanvasElement>;
-            col: Component<HTMLTableColElement>;
-            colgroup: Component<HTMLTableColElement>;
-            data: Component<HTMLDataElement>;
-            datalist: Component<HTMLDataListElement>;
-            del: Component<HTMLModElement>;
-            details: Component<HTMLDetailsElement>;
-            dialog: Component<HTMLDialogElement>;
-            embed: Component<HTMLEmbedElement>;
-            fieldset: Component<HTMLFieldSetElement>;
-            form: Component<HTMLFormElement>;
-            hr: Component<HTMLHRElement>;
-            iframe: Component<HTMLIFrameElement>;
-            img: Component<HTMLImageElement>;
-            input: Component<HTMLInputElement>;
-            ins: Component<HTMLModElement>;
-            label: Component<HTMLLabelElement>;
-            li: Component<HTMLLIElement>;
-            link: Component<HTMLLinkElement>;
-            map: Component<HTMLMapElement>;
-            menu: Component<HTMLMenuElement>;
-            meta: Component<HTMLMetaElement>;
-            meter: Component<HTMLMeterElement>;
-            object: Component<HTMLObjectElement>;
-            ol: Component<HTMLOListElement>;
-            optgroup: Component<HTMLOptGroupElement>;
-            option: Component<HTMLOptionElement>;
-            output: Component<HTMLOutputElement>;
-            progress: Component<HTMLProgressElement>;
-            q: Component<HTMLQuoteElement>;
-            script: Component<HTMLScriptElement>;
-            select: Component<HTMLSelectElement>;
-            slot: Component<HTMLSlotElement>;
-            source: Component<HTMLSourceElement>;
-            style: Component<HTMLStyleElement>;
-            table: Component<HTMLTableElement>;
-            tbody: Component<HTMLTableSectionElement>;
-            td: Component<HTMLTableCellElement>;
-            template: Component<HTMLTemplateElement>;
-            textarea: Component<HTMLTextAreaElement>;
-            tfoot: Component<HTMLTableSectionElement>;
-            th: Component<HTMLTableCellElement>;
-            thead: Component<HTMLTableSectionElement>;
-            time: Component<HTMLTimeElement>;
-            title: Component<HTMLTitleElement>;
-            tr: Component<HTMLTableRowElement>;
-            track: Component<HTMLTrackElement>;
-            video: Component<HTMLVideoElement>;
+        type Elements = {
+            a: ComponentProps<HTMLAnchorElement>;
+            abbr: ComponentProps<HTMLElement>;
+            address: ComponentProps<HTMLElement>;
+            area: ComponentProps<HTMLAreaElement>;
+            article: ComponentProps<HTMLElement>;
+            aside: ComponentProps<HTMLElement>;
+            audio: ComponentProps<HTMLAudioElement>;
+            b: ComponentProps<HTMLElement>;
+            base: ComponentProps<HTMLBaseElement>;
+            bdi: ComponentProps<HTMLElement>;
+            bdo: ComponentProps<HTMLElement>;
+            blockquote: ComponentProps<HTMLQuoteElement>;
+            body: ComponentProps<HTMLBodyElement>;
+            br: ComponentProps<HTMLBRElement>;
+            button: ComponentProps<HTMLButtonElement>;
+            canvas: ComponentProps<HTMLCanvasElement>;
+            caption: ComponentProps<HTMLElement>;
+            cite: ComponentProps<HTMLElement>;
+            code: ComponentProps<HTMLElement>;
+            col: ComponentProps<HTMLTableColElement>;
+            colgroup: ComponentProps<HTMLTableColElement>;
+            data: ComponentProps<HTMLDataElement>;
+            datalist: ComponentProps<HTMLDataListElement>;
+            dd: ComponentProps<HTMLElement>;
+            del: ComponentProps<HTMLModElement>;
+            details: ComponentProps<HTMLDetailsElement>;
+            dfn: ComponentProps<HTMLElement>;
+            dialog: ComponentProps<HTMLDialogElement>;
+            div: ComponentProps<HTMLDivElement>;
+            dl: ComponentProps<HTMLDListElement>;
+            dt: ComponentProps<HTMLElement>;
+            em: ComponentProps<HTMLElement>;
+            embed: ComponentProps<HTMLEmbedElement>;
+            fieldset: ComponentProps<HTMLFieldSetElement>;
+            figcaption: ComponentProps<HTMLElement>;
+            figure: ComponentProps<HTMLElement>;
+            footer: ComponentProps<HTMLElement>;
+            form: ComponentProps<HTMLFormElement>;
+            h1: ComponentProps<HTMLHeadingElement>;
+            head: ComponentProps<HTMLHeadElement>;
+            header: ComponentProps<HTMLElement>;
+            hgroup: ComponentProps<HTMLElement>;
+            hr: ComponentProps<HTMLHRElement>;
+            html: ComponentProps<HTMLHtmlElement>;
+            i: ComponentProps<HTMLElement>;
+            iframe: ComponentProps<HTMLIFrameElement>;
+            img: ComponentProps<HTMLImageElement>;
+            input: ComponentProps<HTMLInputElement>;
+            ins: ComponentProps<HTMLModElement>;
+            kbd: ComponentProps<HTMLElement>;
+            label: ComponentProps<HTMLLabelElement>;
+            legend: ComponentProps<HTMLLegendElement>;
+            li: ComponentProps<HTMLLIElement>;
+            link: ComponentProps<HTMLLinkElement>;
+            main: ComponentProps<HTMLElement>;
+            map: ComponentProps<HTMLMapElement>;
+            mark: ComponentProps<HTMLElement>;
+            menu: ComponentProps<HTMLMenuElement>;
+            meta: ComponentProps<HTMLMetaElement>;
+            meter: ComponentProps<HTMLMeterElement>;
+            nav: ComponentProps<HTMLElement>;
+            noscript: ComponentProps<HTMLElement>;
+            object: ComponentProps<HTMLObjectElement>;
+            ol: ComponentProps<HTMLOListElement>;
+            optgroup: ComponentProps<HTMLOptGroupElement>;
+            option: ComponentProps<HTMLOptionElement>;
+            output: ComponentProps<HTMLOutputElement>;
+            p: ComponentProps<HTMLParagraphElement>;
+            picture: ComponentProps<HTMLElement>;
+            portal: ComponentProps<HTMLElement>;
+            pre: ComponentProps<HTMLPreElement>;
+            progress: ComponentProps<HTMLProgressElement>;
+            q: ComponentProps<HTMLQuoteElement>;
+            rp: ComponentProps<HTMLElement>;
+            rt: ComponentProps<HTMLElement>;
+            ruby: ComponentProps<HTMLElement>;
+            s: ComponentProps<HTMLElement>;
+            samp: ComponentProps<HTMLElement>;
+            script: ComponentProps<HTMLScriptElement>;
+            search: ComponentProps<HTMLElement>;
+            section: ComponentProps<HTMLElement>;
+            select: ComponentProps<HTMLSelectElement>;
+            slot: ComponentProps<HTMLSlotElement>;
+            small: ComponentProps<HTMLElement>;
+            source: ComponentProps<HTMLSourceElement>;
+            span: ComponentProps<HTMLSpanElement>;
+            strong: ComponentProps<HTMLElement>;
+            style: ComponentProps<HTMLStyleElement>;
+            sub: ComponentProps<HTMLElement>;
+            summary: ComponentProps<HTMLElement>;
+            sup: ComponentProps<HTMLElement>;
+            table: ComponentProps<HTMLTableElement>;
+            tbody: ComponentProps<HTMLTableSectionElement>;
+            td: ComponentProps<HTMLTableCellElement>;
+            template: ComponentProps<HTMLTemplateElement>;
+            textarea: ComponentProps<HTMLTextAreaElement>;
+            tfoot: ComponentProps<HTMLTableSectionElement>;
+            th: ComponentProps<HTMLTableCellElement>;
+            thead: ComponentProps<HTMLTableSectionElement>;
+            time: ComponentProps<HTMLTimeElement>;
+            title: ComponentProps<HTMLTitleElement>;
+            tr: ComponentProps<HTMLTableRowElement>;
+            track: ComponentProps<HTMLTrackElement>;
+            u: ComponentProps<HTMLElement>;
+            ul: ComponentProps<HTMLUListElement>;
+            var: ComponentProps<HTMLElement>;
+            video: ComponentProps<HTMLVideoElement>;
+            wbr: ComponentProps<HTMLElement>;
         }
     }
 }
 
 export { }
-
-// const tags = [
-//     "a",
-//     "abbr",
-//     "address",
-//     "area",
-//     "article",
-//     "aside",
-//     "audio",
-//     "b",
-//     "base",
-//     "bdi",
-//     "bdo",
-//     "blockquote",
-//     "body",
-//     "br",
-//     "button",
-//     "canvas",
-//     "caption",
-//     "cite",
-//     "code",
-//     "col",
-//     "colgroup",
-//     "data",
-//     "datalist",
-//     "dd",
-//     "del",
-//     "details",
-//     "dfn",
-//     "dialog",
-//     "div",
-//     "dl",
-//     "dt",
-//     "em",
-//     "embed",
-//     "fencedframe",
-//     "fieldset",
-//     "figcaption",
-//     "figure",
-//     "footer",
-//     "form",
-//     "h1",
-//     "head",
-//     "header",
-//     "hgroup",
-//     "hr",
-//     "html",
-//     "i",
-//     "iframe",
-//     "img",
-//     "input",
-//     "ins",
-//     "kbd",
-//     "label",
-//     "legend",
-//     "li",
-//     "link",
-//     "main",
-//     "map",
-//     "mark",
-//     "menu",
-//     "meta",
-//     "meter",
-//     "nav",
-//     "noscript",
-//     "object",
-//     "ol",
-//     "optgroup",
-//     "option",
-//     "output",
-//     "p",
-//     "picture",
-//     "portal",
-//     "pre",
-//     "progress",
-//     "q",
-//     "rp",
-//     "rt",
-//     "ruby",
-//     "s",
-//     "samp",
-//     "script",
-//     "search",
-//     "section",
-//     "select",
-//     "slot",
-//     "small",
-//     "source",
-//     "span",
-//     "strong",
-//     "style",
-//     "sub",
-//     "summary",
-//     "sup",
-//     "table",
-//     "tbody",
-//     "td",
-//     "template",
-//     "textarea",
-//     "tfoot",
-//     "th",
-//     "thead",
-//     "time",
-//     "title",
-//     "tr",
-//     "track",
-//     "u",
-//     "ul",
-//     "var",
-//     "video",
-//     "wbr",
-// ];

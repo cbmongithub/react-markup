@@ -1,91 +1,96 @@
-import { Header } from "@/components/header"
-import { Heading } from "@/components/heading"
-import { Menu } from "@/components/menu";
-import { Nav } from "@/components/nav"
+// import { Abbr, B, Blockquote, Br, Del, Em, Header, Heading, Hr, I, Kbd, Li, Main, Mark, Menu, Nav, Object, Ol, P, Rt, Ruby, S, Small, Span, Sub, Sup, Template, Time, Track, U, Ul, Video } from "@/components/backup";
 import Image from "next/image"
+import Dynamic from "@/components/dynamic";
+import Link from "next/link";
+
+const { P, B, I, H1, H2, H3, H4, H5, H6, Em, Mark, Object, Span, Main, Small, Nav, Li, Menu, Sub, Sup, U, Abbr, Del, S, Time, Ruby, Rt, Br, Kbd, Blockquote, Ol, Header, Ul, Hr, Template, Video, Track } = Dynamic;
 
 export default function Page() {
   return (
-    <html lang="en">
-      <body>
+    <>
         <Header>
           <Nav>
-            <Heading as="h1">HEADER</Heading>
-            <Menu id="navmenu">
-              <li role="menuitem">
-                <a href="#">Home</a>
-              </li>
+          <Menu>
+            <Li>
+              <Link href="#">Home</Link>
+            </Li>
+            <Li>
+              <Link href="#">About</Link>
+            </Li>
+            <Li>
+              <Link href="#">Contact</Link>
+            </Li>
             </Menu>
           </Nav>
+        <H1>Page Title</H1>
+        <H2>Subtitle</H2>
+        <H3>Sub-subtitle</H3>
+        <H4>Sub-sub-subtitle</H4>
+        <H5>Sub-sub-sub-subtitle</H5>
+        <H6>Sub-sub-sub-sub-subtitle</H6>
         </Header>
-        <main>
-          <Heading as="h1">Heading...</Heading>
-          <Heading as="h2">Heading...</Heading>
-          <Heading as="h3">Heading...</Heading>
-          <Heading as="h4">Heading...</Heading>
-          <Heading as="h5">Heading...</Heading>
-          <Heading as="h6">Heading...</Heading>
-          <p>
+      <Main>
+        <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi lacus,
             auctor sit amet purus vel, gravida luctus lectus. Aenean rhoncus dapibus enim, sit amet faucibus leo ornare vitae. <br />
-            <span> span </span>
-            <b>Bold word</b>
-            <i>italic</i>
-            <em>emphasis</em>
-            <mark>mark</mark>
-            <small> small </small>
-            <sub> sub </sub>
-            <sup> sup </sup>
-            <u> Statements... </u>
-            <abbr title="National Aeronautics and Space Administration">NASA</abbr>
-            <span><del> deprecated info </del> <ins> new info </ins> </span>
-            <s> not relevant </s>
-            <a href="#link">link</a>
-            <time dateTime={"2020-08-17 08:00"}>Monday at 8:00 AM</time>
-            <ruby>ruby base<rt />annotation</ruby>
-            <br />
-            <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>CANC</kbd>
-          </p>
-        </main>
+          <Span> Span </Span>
+          <B>Bold word</B>
+          <I>italic</I>
+          <Em>emphasis</Em>
+          <Mark>mark</Mark>
+          <Small> small </Small>
+          <Sub> sub </Sub>
+          <Sup> sup </Sup>
+          <U> Statements... </U>
+          <Abbr title="National Aeronautics and Space Administration">NASA</Abbr>
+          <Span><Del> deprecated info </Del> <ins> new info </ins> </Span>
+          <S> not relevant </S>
+          <Link href="#link">link</Link>
+          <Time dateTime={"2020-08-17 08:00"}>Monday at 8:00 AM</Time>
+          <Ruby>ruby base<Rt />annotation</Ruby>
+          <Br />
+          <Kbd>CTRL</Kbd>+<Kbd>ALT</Kbd>+<Kbd>CANC</Kbd>
+        </P>
+      </Main>
 
-        <p> This is a <q>short quote</q> </p>
-        <blockquote> This instead is a long quote that is going to use a lot of words and also cite who said that. —<cite>Some People</cite> </blockquote>
+      <P> This is a <q>short quote</q> </P>
+      <Blockquote> This instead is a long quote that is going to use a lot of words and also cite who said that. —<cite>Some People</cite> </Blockquote>
 
-        <ol>
-          <li><data value="21053">data tag</data></li>
-          <li><data value="23452">data tag</data></li>
-          <li><data value="42545">data tag</data></li>
-          <li>List item</li>
-          <li>List item</li>
-          <li>List item</li>
-        </ol>
+      <Ol>
+        <Li><data value="21053">data tag</data></Li>
+        <Li><data value="23452">data tag</data></Li>
+        <Li><data value="42545">data tag</data></Li>
+        <Li>List item</Li>
+        <Li>List item</Li>
+        <Li>List item</Li>
+      </Ol>
 
-        <ul>
-          <li>List item</li>
-          <li>List item</li>
-          <li>List item</li>
-          <li>List item</li>
-          <li>List item</li>
-          <li>List item</li>
-        </ul>
+      <Ul>
+        <Li>List item</Li>
+        <Li>List item</Li>
+        <Li>List item</Li>
+        <Li>List item</Li>
+        <Li>List item</Li>
+        <Li>List item</Li>
+      </Ul>
 
-        <hr />
+      <Hr />
 
-        <template>
+      <Template>
           <h2>Hidden content (after page loaded).</h2>
-        </template>
+      </Template>
 
-        <video width="640" height="480" src="https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4" controls>
-          <track kind="subtitles" src="subtitles_de.vtt" srcLang="de" />
-          <track kind="subtitles" src="subtitles_en.vtt" srcLang="en" />
-          <track kind="subtitles" src="subtitles_ja.vtt" srcLang="ja" />
+      <Video width={640} height={480} src="https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4">
+        <Track kind="subtitles" src="subtitles_de.vtt" srcLang="de" label={"Transcriptions in Dutch"} />
+        <Track kind="subtitles" src="subtitles_en.vtt" srcLang="en" label={"Transcriptions in English"} />
+        <Track kind="subtitles" src="subtitles_ja.vtt" srcLang="ja" label={"Transcriptions in Japanese"} />
           Sorry, your browser doesn't support HTML5 <code>video</code>, but you can
-          download this video from the <a href="https://archive.org/details/Popeye_forPresident" target="_blank">Internet Archive</a>.
-        </video>
+        download this video from the <Link href="https://archive.org/details/Popeye_forPresident" target="_blank">Internet Archive</Link>.
+      </Video>
 
-        <object data="flashmovie.swf" width="600" height="800" type="application/x-shockwave-flash">
+      <Object data="/assets/files/Lorem_ipsum.pdf" width={600} height={800} type="application/x-shockwave-flash">
           Please install the Shockwave plugin to watch this movie.
-        </object>
+      </Object>
 
         <pre>
           This is a preformatted text.
@@ -93,10 +98,10 @@ export default function Page() {
         </pre>
 
         <code>print("Hello, World!")</code>
-        <p>
+      <P>
           <var> variable </var> = 1000;
           <samp>Traceback (most recent call last):<br />NameError: name 'variabl' is not defined</samp>
-        </p>
+      </P>
         <table>
           <thead>
             <tr>
@@ -131,24 +136,24 @@ export default function Page() {
           </tbody>
         </table>
 
-        <p> A <dfn>definition</dfn> is an explanation of the meaning of a word or phrase. </p>
+      <P> A <dfn>definition</dfn> is an explanation of the meaning of a word or phrase. </P>
 
         <details>
           <summary>Summary of content below</summary>
-          <p>Content 1</p>
-          <p>Content 2</p>
-          <p>Content 3</p>
-          <p>Content 4</p>
+        <P>Content 1</P>
+        <P>Content 2</P>
+        <P>Content 3</P>
+        <P>Content 4</P>
         </details>
         <section>
           <h1>Content</h1>
-          <p>Informations about content.</p>
+        <P>Informations about content.</P>
         </section>
 
         <progress value="33" max="100"></progress>
         <meter value="11" min="0" max="45" optimum={40}>25 out of 45</meter>
 
-        <p> 2+2 = <output>4</output> </p>
+      <P> 2+2 = <output>4</output> </P>
 
         <select>
           <optgroup label="Choice [1-3]">
@@ -165,7 +170,7 @@ export default function Page() {
 
         <div>
           <div>
-            <p>{`div > div > p`}</p>
+          <P>{`div > div > p`}</P>
           </div>
 
           <br />
@@ -173,14 +178,12 @@ export default function Page() {
 
         </div>
         <svg width="100" height="100">
-          <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        <circle cx="50" cy="50" r="40" stroke="green" strokeWidth="4" fill="yellow" />
         </svg>
 
         <br />
 
-        <textarea id="textarea" name="textarea" rows={4} cols={50}>
-          Write something in here
-        </textarea>
+      <textarea rows={4} cols={50} />
 
         <br />
 
@@ -189,20 +192,20 @@ export default function Page() {
           <source src="https://archive.org/download/ReclaimHtml5/ReclaimHtml5.ogg" type="audio/ogg" />
           <source src="https://archive.org/download/ReclaimHtml5/ReclaimHtml5.mp3" type="audio/mpeg" />
         </audio>
-        <p>This is a recording of a talk called <cite>Reclaim HTML5</cite> which was orinally delieved in Vancouver at a
-          <a href="http://www.meetup.com/vancouver-javascript-developers/" target="_blank">Super VanJS Meetup</a>.
-          It is hosted by <a href="https://archive.org/details/ReclaimHtml5" target="_blank">The Internet Archive</a> and licensed under
-          <a href="http://creativecommons.org/licenses/by/3.0/legalcode" target="_blank">CC 3.0</a>.</p>
+      <P>This is a recording of a talk called <cite>Reclaim HTML5</cite> which was orinally delieved in Vancouver at a
+        <Link href="http://www.meetup.com/vancouver-javascript-developers/" target="_blank">Super VanJS Meetup</Link>.
+        It is hosted by <Link href="https://archive.org/details/ReclaimHtml5" target="_blank">The Internet Archive</Link> and licensed under
+        <Link href="http://creativecommons.org/licenses/by/3.0/legalcode" target="_blank">CC 3.0</Link>.</P>
 
-        <iframe src="https://open.spotify.com/embed?uri=spotify%3Atrack%3A67HxeUADW4H3ERfaPW59ma?si=PogFcGg9QqapyoPbn2lVOw" width="300" height="380" allowTransparency={true}></iframe>
+      <iframe src="https://open.spotify.com/embed?uri=spotify%3ATrack%3A67HxeUADW4H3ERfaPW59ma?si=PogFcGg9QqapyoPbn2lVOw" width="300" height="380"></iframe>
 
         <article>
           <header>
             <h2>Title of Article</h2>
-            <span>by Arthur T. Writer</span>
+          <Span>by Arthur T. Writer</Span>
           </header>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat sollicitudin nisi,
-            at convallis nunc semper et. Donec ultrices odio ac purus facilisis, at mollis urna finibus.</p>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat sollicitudin nisi,
+          at convallis nunc semper et. Donec ultrices odio ac purus facilisis, at mollis urna finibus.</P>
           <figure>
             <Image src="https://placehold.it/600x300" alt="placeholder-image" width={600} height={300} />
             <figcaption> Caption.</figcaption>
@@ -222,7 +225,7 @@ export default function Page() {
         </form>
 
         <aside>
-          <p> P inside ASIDE tag </p>
+        <P> P inside ASIDE tag </P>
         </aside>
         <map name="shapesmap"> <area shape="rect" coords="29,32,230,215" href="#square" alt="Square" />
           <area shape="circle" coords="360,130,100" href="#circle" alt="Circle" /> </map>
@@ -243,11 +246,10 @@ export default function Page() {
         </form>
 
         <footer>
-          <address> relevant contacts <a href="mailto:mail@example.com">mail</a>.</address>
-          <div> created by <a href="https://blazardsky.space">@blazardsky</a></div>
+        <address> relevant contacts <Link href="mailto:mail@example.com">mail</Link>.</address>
+        <div> created by <Link href="https://blazardsky.space">@blazardsky</Link></div>
         </footer>
 
-      </body>
-    </html>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../styles/markup.css";
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
 	title: "React Markup",
